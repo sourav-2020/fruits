@@ -22,6 +22,141 @@
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
 
+         <!-- custom css classes -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'accent-red': '#F85559',
+                        'accent-black': '#121212',
+                        'accent-grey': '#12121299',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- universal styles -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- desktop and tablet header  -->
+
+    <header
+        class="max-w-screen-xl bg-accent-red my-9 hidden sm:block rounded-full lg:mx-auto mx-5 pr-12 md:pr-6 md:pl-14 p-6">
+        <nav class="flex justify-between items-center">
+            <ul class="hidden lg:flex text-base text-white font-medium gap-6 justify-start items-center ">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+     <!-- dropdown for tablet  -->
+     <div class="lg:hidden dropdown">
+        <label tabindex="0" class="btn btn-ghost btn-circle">
+            <i class="fa-solid text-white text-2xl fa-bars"></i>
+        </label>
+        <ul tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Shop</a></li>
+            <li><a>Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="flex cursor-pointer gap-3 items-center justify-start">
+        <img class="w-11" src="./images/logo.png" alt="">
+        <h1 class="text-white text-4xl font-bold">Fruit Hub</h1>
+    </div>
+
+    <div class="gap-24 flex px-6 py-3 rounded-full justify-between bg-white items-center">
+        <input class="text-sm outline-none text-accent-grey" id="search" placeholder="Search Here" type="text">
+        <label for="search">
+            <i class="fa-solid cursor-pointer fa-magnifying-glass"></i>
+        </label>
+    </div>
+</nav>
+</header>
+
+      <!-- mobile header  -->
+      <div class="w-screen sm:hidden pt-8 px-5 flex justify-between bg-white">
+        <div class="flex flex-1 cursor-pointer gap-3 items-center justify-start">
+            <img class="w-11" src="./images/logo.png" alt="">
+            <h1 class="text-accent-black text-4xl font-bold">Fruit Hub</h1>
+        </div>
+
+        <div class="">
+            <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost btn-circle">
+                    <i class="fa-solid text-accent-black text-2xl fa-bars"></i>
+                </label>
+                <ul tabindex="0"
+                    class="menu menu-sm right-0 dropdown-content shadow-lg bg-base-100 rounded-box w-[calc(100vw-20px)] mt-3 z-10 p-2">
+                    <li><a class="text-base font-medium">Home</a></li>
+                    <li><a class="text-base font-medium">About</a></li>
+                    <li><a class="text-base font-medium">Shop</a></li>
+                    <li><a class="text-base font-medium">contact</a></li>
+                    <li>
+                        <div class="gap-24 flex pl-3 pr-6 py-3 rounded-full justify-between bg-white items-center">
+                            <input class="text-sm outline-none text-accent-grey" id="search" placeholder="Search Here"
+                                type="text">
+                            <label for="search">
+                                <i class="fa-solid cursor-pointer fa-magnifying-glass"></i>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- banner start  -->
+
+    <section class="text-center relative max-w-screen-xl mb-0 sm:mb-16 mx-5 lg:mx-auto ">
+        <div class="carousel mt-4 sm:mt-0 w-full">
+
+            <!-- slide 1  -->
+
+            <div id="slide1" class="carousel-item h-fit sm:h-auto relative w-full">
+
+
+                <div class="hero rounded-lg" style="background-image: url('./images/banner1.png');">
+                    <div class="w-full h-full rounded-lg bg-gradient-to-b from-accent-black to-transparent">
+                    </div>
+                    <div class="hero-content py-7 sm:pt-20 sm:pb-44 text-center text-neutral-content">
+                        <div class="max-w-xl">
+                            <h1 class="sm:mb-5 mb-1 text-3xl sm:text-6xl text-white font-extrabold">Exotic tastes at
+                                your doorstep</h1>
+
+                            <p class="sm:mb-7 mb-3 text-base text-white font-normal">We supply highly quality organic
+                                products
+                            </p>
+                            <button
+                                class="btn btn-error bg-accent-red border-none capitalize text-base px-6 hover:bg-accent-red font-bold text-white">Shop
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div
+                    class="absolute flex justify-between transform -translate-y-1/2 sm:left-5 sm:right-5 left-0 right-0 top-1/2">
+                    <a href="#slide4" class="btn btn-circle">❮</a>
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+
 </head>
 <body>
     
